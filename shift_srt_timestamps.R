@@ -72,7 +72,11 @@ shift_srt_timestamps <- function(input_srt, output_srt, shift_seconds) {
   }
 }
 
-# Example usage:
-# source("shift_srt_timestamps.R")
-# shift_srt_timestamps("input.srt", "output.srt", 42)  # Shift forward by 42 seconds
-# shift_srt_timestamps("input.srt", "output.srt", -10) # Shift backward by 10 seconds
+
+source("shift_srt_timestamps.R")
+
+# Shift forward by 42 seconds
+shift_srt_timestamps("input.srt", "output.srt", 42)
+
+# Shift backward by 10 seconds
+shift_srt_timestamps("input.srt", "output.srt", -10)

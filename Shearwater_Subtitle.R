@@ -61,7 +61,7 @@ shearwater_srt_shift <- function(input_csv, output_srt, shift_seconds) {
 
   adjusted_timestamps <- timestamps + shift_seconds
   valid_indices <- which(adjusted_timestamps[, 1] >=
-                           0 & adjusted_timestamps[, 2] >= 
+                           0 & adjusted_timestamps[, 2] >=
                            0)
   adjusted_timestamps <- adjusted_timestamps[valid_indices, , drop = FALSE]
 
@@ -97,7 +97,11 @@ shearwater_srt_shift <- function(input_csv, output_srt, shift_seconds) {
   }
 }
 
-# Example usage:
-# source("Shearwater_Subtitle.R")
-# shearwater_srt_shift("input.csv", "output.srt", 42)  # Shift timestamp forward by 42s
-# shearwater_srt_shift("input.csv", "output.srt", -10) # Shift timestamp backward by 10s
+
+source("Shearwater_Subtitle.R")
+
+# Shift timestamp forward by 42s:
+shearwater_srt_shift("input.csv", "output.srt", 42)
+
+# Shift timestamp backward by 10s
+shearwater_srt_shift("input.csv", "output.srt", -10)
